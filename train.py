@@ -168,14 +168,6 @@ class Model(available_models[args.model]):
 
 
 m = Model()
-#Compute statistics and record in statistics.txt
-#To use get_model_profile you must include a forward pass fonction inside the model!
-flops, macs, params = get_model_profile(
-    model=m.cuda(),
-    input_shape=(1, 80, 64),
-    detailed=False,
-    output_file=
-    f'{args.output}/{args.model}/{args.variant}/{args.dataset}/statistics.txt')
 
 m.set_dataset(*get_dataset(
     args.dataset,
