@@ -1,3 +1,4 @@
+"""Mainly taken from official code https://github.com/descriptinc/melgan-neurips"""
 from turtle import forward
 from .generator import Generator
 from .discriminator import Discriminator
@@ -22,10 +23,6 @@ class MelGAN(LightningModule):
                  downsamp_factor: int
     ):
         """
-        Implementation of MelGAN: https://arxiv.org/pdf/1910.06711.pdf
-
-        Mainly taken from official code https://github.com/descriptinc/melgan-neurips
-
         Args:
             `n_mel`: The number of mel channels.
             `mel_stride`: The mel-spectrogram hop-window.

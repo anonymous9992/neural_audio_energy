@@ -1,3 +1,4 @@
+"""Taken from https://github.com/NVIDIA/waveglow"""
 import copy
 import torch
 from torch.autograd import Variable
